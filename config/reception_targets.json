@@ -1,0 +1,9 @@
+{
+  "targets": [
+    {
+      "norad_id": 39444,
+      "name": "AO-73 / FUNcube-1",
+      "enabled": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "modular-ground-station-openmct",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite --host 0.0.0.0 --port 8080",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "openmct": "^4.1.0"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

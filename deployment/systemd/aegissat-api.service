@@ -1,0 +1,19 @@
+[Unit]
+Description=Modular Satellite Ground Station API
+Wants=network-online.target docker.service
+After=network-online.target docker.service
+
+[Service]
+Type=simple
+User=__USER__
+Group=__GROUP__
+WorkingDirectory=__PROJECT_DIR__
+EnvironmentFile=__PROJECT_DIR__/.env
+Environment=HOME=__HOME__
+Environment=PATH=__PROJECT_DIR__/.venv/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=__PROJECT_DIR__/.venv/bin/uvicorn aegissat.api:app --host 0.0.0.0 --port 8000
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

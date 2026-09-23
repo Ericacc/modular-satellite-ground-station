@@ -1,0 +1,47 @@
+{
+  "satellites": [
+    {
+      "id": "aegissat-01-laboratory",
+      "name": "AegisSat-01 laboratory profile",
+      "norad_id": 0,
+      "downlink_frequency_hz": 437500000,
+      "modulation": "gmsk",
+      "baud_rate": 9600,
+      "framing": "ax25",
+      "fec": "convolutional",
+      "decoder": "laboratory",
+      "sample_rate": 240000,
+      "enabled": false,
+      "provisional": true
+    },
+    {
+      "id": "ao-73",
+      "name": "AO-73 / FUNcube-1",
+      "norad_id": 39444,
+      "downlink_frequency_hz": 145935000,
+      "modulation": "bpsk",
+      "mode": "BPSK",
+      "baud_rate": 1200,
+      "framing": "funcube",
+      "decoder": "gr_satellites",
+      "gr_satellites_id": 39444,
+      "rtl_sample_rate": 240000,
+      "enabled": true,
+      "provisional": false
+    },
+    {
+      "id": "floripasat-1",
+      "name": "FloripaSat-1",
+      "norad_id": 44885,
+      "downlink_frequency_hz": 145900000,
+      "modulation": "gfsk",
+      "mode": "GFSK",
+      "baud_rate": 1200,
+      "framing": "ngham_ax25",
+      "decoder": "iq_recording",
+      "rtl_sample_rate": 240000,
+      "enabled": true,
+      "provisional": false
+    }
+  ]
+}

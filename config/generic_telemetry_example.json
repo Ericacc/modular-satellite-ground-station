@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "satellite": {
+    "id": "example-satellite"
+  },
+  "reception": {
+    "timestamp": "2026-08-12T15:30:00+00:00",
+    "timestamp_ms": 1786548600000,
+    "source": "gr_satellites",
+    "decoder": "gr-satellites"
+  },
+  "parameters": [
+    {
+      "name": "battery_voltage",
+      "path": "EPS.battery_voltage",
+      "value": 4.12,
+      "value_type": "float",
+      "unit": null,
+      "metadata_known": false
+    }
+  ],
+  "raw_payload_hex": "01020304"
+}

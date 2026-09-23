@@ -1,0 +1,41 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Local environment
+.env
+openmct/.env
+openmct/.env.local
+openmct/.env.production
+!openmct/.env.example
+
+# Runtime data
+data/
+logs/
+demo_runs/
+test_reports/
+outputs/
+*.log
+*.pid
+nohup.out
+commands.kiss
+
+# Open MCT generated files
+openmct/node_modules/
+openmct/dist/
+
+# Development backups
+*.bak
+*.backup
+*.before_*
+
+# Operating system
+.DS_Store
+
+# Local demonstration scripts
+run_demo_real_pass.sh
+run_demo_recording.sh
+run_ground_station.sh

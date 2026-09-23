@@ -1,0 +1,20 @@
+def sample_telemetry(counter=10):
+    return {
+        "header": {"id_sat": 1, "timestamp_ms": 123456789,
+                   "time_alive": 3600, "counter_packs": counter},
+        "eps": {"vbat": 7.4, "ibat": 0.5, "tbat": 25.0,
+                "vsolar1": 5.1, "isolar1": 0.2, "vsolar2": 5.0,
+                "isolar2": 0.25, "teps": 26.0},
+        "adcs": {"tadcs": 24.0, "w_x": 0.01, "w_y": 0.02, "w_z": 0.03,
+                 "mag_x": 10.0, "mag_y": 11.0, "mag_z": 12.0,
+                 "sun_x": 0.1, "sun_y": 0.2, "sun_z": 0.3},
+        "obc": {"tobc": 30.0, "cpu_ocuppation": 45,
+                "ram_free": 1024, "flash_memory_ocuppation": 2048},
+        "comms": {"tx_power": 1.5, "rx_RSSI": -70.0, "rx_snr": 12.5,
+                  "message_error_rate": 0.01, "ber": 0.001},
+        "payload": {"tpayload": 28.0, "ipayload": 0.15, "payload_state": 1},
+        "weather": {"external_temp": 19.0, "solar_reception": 850.0},
+        "orbit": {"orbit_ID": 3, "orbit_height": 500.0,
+                  "orbit_latitude": 0.0, "orbit_longitude": 0.0},
+        "flags": {"error_flag": 0, "start_flag": 1, "end_flag": 1},
+    }

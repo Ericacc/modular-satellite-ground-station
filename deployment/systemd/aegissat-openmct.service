@@ -1,0 +1,18 @@
+[Unit]
+Description=Modular Satellite Ground Station Open MCT Interface
+Wants=network-online.target aegissat-api.service
+After=network-online.target aegissat-api.service
+
+[Service]
+Type=simple
+User=__USER__
+Group=__GROUP__
+WorkingDirectory=__PROJECT_DIR__/openmct
+Environment=HOME=__HOME__
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+ExecStart=/usr/bin/env npm start
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

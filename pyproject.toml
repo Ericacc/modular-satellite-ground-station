@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modular-satellite-ground-station"
+version = "2.0.0"
+description = "Modular Raspberry Pi satellite ground-station backend"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi==0.116.1",
+  "uvicorn[standard]==0.35.0",
+  "influxdb-client==1.49.0",
+  "numpy==2.2.6",
+  "python-dotenv==1.1.1",
+  "skyfield==1.53",
+  "pyrtlsdr==0.3.0"
+]
+
+[project.optional-dependencies]
+test = ["pytest==8.4.1", "httpx==0.28.1"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aegissat*", "radio*"]
+exclude = ["tests*", "config*", "deploy*", "openmct*"]
