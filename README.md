@@ -136,7 +136,7 @@ Known recording profiles can be defined in `config/recording_tests.json`, allowi
 
 ## Laboratory Simulation
 
-A laboratory telemetry simulation is included to test the processing chain without a satellite signal. The current simulation uses a provisional AegisSat-01 telemetry format and is kept separate from the generic reception workflow.
+A laboratory telemetry simulation is included to test the processing chain without a satellite signal. The current simulation uses a provisional telemetry format and is kept separate from the generic reception workflow.
 
 ## Project Structure
 
