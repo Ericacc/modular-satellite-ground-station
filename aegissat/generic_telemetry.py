@@ -13,7 +13,6 @@ def _safe_name(value):
 
 
 def _json_value(value):
-    """Return a JSON-safe value while keeping useful primitive types."""
     if value is None or isinstance(value, (str, bool, int)):
         return value
     if isinstance(value, float):
@@ -26,7 +25,6 @@ def _json_value(value):
 
 
 def flatten_parameters(data, prefix=""):
-    """Flatten arbitrary decoder output into an open list of named parameters."""
     parameters = []
 
     if isinstance(data, dict):
@@ -84,7 +82,6 @@ def build_generic_telemetry(satellite_id, decoded_data, source,
 
 
 def archive_generic_telemetry(document, directory):
-    """Write one human-readable JSON file per received decoded frame."""
     target_directory = Path(directory)
     target_directory.mkdir(parents=True, exist_ok=True)
     satellite = _safe_name(document["satellite"]["id"])
